@@ -457,3 +457,70 @@ INFO: [Common 17-186] '/home/henryboswell/Desktop/project_1/project_1.runs/impl_
 write_bitstream completed successfully
 write_bitstream: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1739.520 ; gain = 426.559 ; free physical = 586 ; free virtual = 2469
 INFO: [Common 17-206] Exiting Vivado at Sun Sep 24 12:00:10 2017...
+
+*** Running vivado
+    with args -log top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: open_checkpoint top_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1083.043 ; gain = 0.000 ; free physical = 398 ; free virtual = 2851
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/henryboswell/Desktop/Xilinx-FPGA-Projects/project_1/project_1.runs/impl_1/.Xil/Vivado-7520-henryboswell-virtual-machine/dcp3/top.xdc]
+Finished Parsing XDC File [/home/henryboswell/Desktop/Xilinx-FPGA-Projects/project_1/project_1.runs/impl_1/.Xil/Vivado-7520-henryboswell-virtual-machine/dcp3/top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1312.953 ; gain = 0.000 ; free physical = 102 ; free virtual = 2581
+Restored from archive | CPU: 0.000000 secs | Memory: 0.021400 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1312.953 ; gain = 0.000 ; free physical = 102 ; free virtual = 2581
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2017.2 (64-bit) build 1909853
+Command: write_bitstream -force top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35ti-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35ti-csg324'
+Running DRC as a precondition to command write_bitstream
+Command: report_drc (run_mandatory_drcs) for: bitstream_checks
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] '/home/henryboswell/Desktop/Xilinx-FPGA-Projects/project_1/project_1.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sun Oct  8 04:06:15 2017. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+16 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1739.512 ; gain = 426.559 ; free physical = 441 ; free virtual = 2563
+INFO: [Common 17-206] Exiting Vivado at Sun Oct  8 04:06:16 2017...
