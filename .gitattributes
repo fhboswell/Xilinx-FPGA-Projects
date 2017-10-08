@@ -1,2 +1,5 @@
 project_1/* linguist-vendored
 project_1/project_1.srcs/* linguist-vendored=false
+
+FullAdder/* linguist-vendored
+FullAdder/FullAdder.srcs/* linguist-vendored=false
